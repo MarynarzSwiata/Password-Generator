@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator | v1.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<br>
+    <div class="box">
+        <header>Password Generator | v1.0</header>
+        <form>
+            <div>
+                <input type="text" placeholder="Press button Generate..." id="password" name="password" minlength="5" maxlength="12" readonly value="">
+            </div>
+            <div>
+                <div>
+                    <h4>Length of Password:</h4>
+                    <input style="width: 92%;" type="range" name="passwordLength" id="passwordLength" min="3" max="20" step="1" oninput="this.nextElementSibling.value = this.value">
+                    <output style="position: absolute; margin: 5px 18px; font-size: 22px;">12</output>
+                </div>
+                    <div>
+                        <input type="checkbox" class="checkbox" name="numbers" id="numbers" checked>
+                        <label for="numbers">Use numbers</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox" name="letters" id="letters" checked>
+                        <label for="letters">Use letters</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkbox" name="characters" id="characters" checked>
+                        <label for="characters">Use characters</label>
+                    </div>
+            </div>
+        </form>
+        <div style="float: left;"><button class="btn" id="generate">Generate</button></div>
+        <div style="float: right;"><button class="btn" id="copy">Copy</button></div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
